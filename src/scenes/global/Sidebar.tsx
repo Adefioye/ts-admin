@@ -68,7 +68,6 @@ const LeftSideBar = () => {
 
   return (
     <>
-      {console.log(collapsed)}
       <Box
         sx={{
           display: "flex",
