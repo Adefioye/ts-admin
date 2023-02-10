@@ -24,23 +24,25 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import { Link } from "react-router-dom";
 
 import adminPic from "../../assets/profile.jpg";
 
 interface ItemProps {
   title: string;
-  // to: string;
+  to: string;
   icon: ReactNode;
   selected: string;
   setSelected: (value: string) => void;
 }
 
-const Item = ({ title, icon, selected, setSelected }: ItemProps) => {
+const Item = ({ title, to, icon, selected, setSelected }: ItemProps) => {
   const theme = useTheme();
   const colors = getDesignTokens(theme.palette.mode);
 
   return (
     <MenuItem
+      component={<Link to={to} />}
       active={selected === title}
       style={{ color: selected === title ? "#6870fa" : colors.grey[400] }}
       onClick={() => setSelected(title)}
@@ -55,7 +57,7 @@ const Item = ({ title, icon, selected, setSelected }: ItemProps) => {
         },
       }}
     >
-      {title}
+      <Typography>{title}</Typography>
     </MenuItem>
   );
 };
@@ -156,6 +158,7 @@ const LeftSideBar = () => {
             <Box style={{ paddingLeft: collapsed ? undefined : "10%" }}>
               <Item
                 title="Dashboard"
+                to="/"
                 icon={<HomeOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
@@ -172,18 +175,21 @@ const LeftSideBar = () => {
 
               <Item
                 title="Manage Team"
+                to="/team"
                 icon={<PeopleOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Contacts Information"
+                to="/contacts"
                 icon={<ContactsOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Invoices Balances"
+                to="/invoices"
                 icon={<ReceiptOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
@@ -201,18 +207,21 @@ const LeftSideBar = () => {
 
               <Item
                 title="Profile Form"
+                to="/form"
                 icon={<PersonOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title=" Calendar"
+                to="/calendar"
                 icon={<CalendarTodayOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title=" FAQ Page"
+                to="/faq"
                 icon={<HelpOutlineOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
@@ -230,24 +239,28 @@ const LeftSideBar = () => {
 
               <Item
                 title="Bar Chart"
+                to="/bar"
                 icon={<BarChartOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Pie Chart"
+                to="/pie"
                 icon={<PieChartOutlineOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Line Chart"
+                to="/line"
                 icon={<TimelineOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Geography Chart"
+                to="/geography"
                 icon={<MapOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}

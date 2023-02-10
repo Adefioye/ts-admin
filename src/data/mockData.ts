@@ -8,7 +8,7 @@ import {
   TransactionsInterface,
 } from "../interfaces";
 
-import {getDesignTokens} from "./../theme"
+import { getDesignTokens } from "./../theme";
 
 export const mockDataTeam: DataTeamInterface[] = [
   {
