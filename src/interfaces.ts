@@ -35,16 +35,19 @@ export interface TransactionsInterface {
   cost: string;
 }
 
-export interface BarDataInterface {
-  country: string;
-  "hot dog": number;
-  "hot dogColor": string;
-  burger: number;
-  burgerColor: string;
-  kebab: number;
-  kebabColor: string;
-  donut: number;
-  donutColor: string;
+// export interface BarDataInterface {
+//   country: string;
+//   "hot dog": number;
+//   "hot dogColor": string;
+//   burger: number;
+//   burgerColor: string;
+//   kebab: number;
+//   kebabColor: string;
+//   donut: number;
+//   donutColor: string;
+// }
+export interface BarDatum {
+  [key: string]: string | number;
 }
 
 export interface PieDataInterface {

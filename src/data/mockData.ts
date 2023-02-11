@@ -1,5 +1,5 @@
 import {
-  BarDataInterface,
+  BarDatum,
   DataContactInterface,
   DataInvoiceInterface,
   DataTeamInterface,
@@ -327,7 +327,7 @@ export const mockTransactions: TransactionsInterface[] = [
   },
 ];
 
-export const mockBarData: BarDataInterface[] = [
+export const mockBarData: BarDatum[] = [
   {
     country: "AD",
     "hot dog": 137,
