@@ -96,3 +96,9 @@ export interface FormValuesInterface {
   address1: string;
   address2: string;
 }
+
+export interface CalendarEventInterface {
+  id: string;
+  title: string;
+  date: string;
+}
