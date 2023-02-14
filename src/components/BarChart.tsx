@@ -120,7 +120,7 @@ const BarChart = ({ isDashboard = false }) => {
         },
       ]}
       role="application"
-      barAriaLabel={function(e) {
+      barAriaLabel={function(e: any) {
         return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
       }}
     />

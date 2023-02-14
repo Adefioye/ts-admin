@@ -1,15 +1,15 @@
-import { ResponsiveLine} from "@nivo/line";
+import { ResponsiveLine, LineSvgProps } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { getDesignTokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
 
 interface LineChartProps {
-    isCustomLineColors: boolean,
-    isDashboard: boolean
+  isDashboard: boolean;
 }
 
-
-const LineChart = ({ isCustomLineColors = false, isDashboard = false }: LineChartProps) => {
+const LineChart = ({
+  isDashboard = false,
+}: LineChartProps) => {
   const theme = useTheme();
   const colors = getDesignTokens(theme.palette.mode);
 
