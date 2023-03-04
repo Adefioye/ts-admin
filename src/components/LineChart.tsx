@@ -7,13 +7,12 @@ interface LineChartProps {
   isDashboard: boolean;
 }
 
-const LineChart = ({
-  isDashboard = false,
-}: LineChartProps) => {
+const LineChart: React.FC<LineChartProps> = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = getDesignTokens(theme.palette.mode);
 
   return (
+    // @ts-ignore: To suppress overload errors on ResponsiveLine on nivochart
     <ResponsiveLine
       data={data}
       theme={{

@@ -440,7 +440,7 @@ export const mockPieData: PieDataInterface[] = [
   },
 ];
 
-export const mockLineData: LineDataInterface[] = [
+export const mockLineData = [
   {
     id: "japan",
     color: getDesignTokens("dark").greenAccent[500],
